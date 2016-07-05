@@ -8,6 +8,7 @@ module "global" {
   aws_account_id = "${var.aws_account_id}"
   aws_region = "${var.aws_region}"
   vpc_domain = "${var.vpc_domain}"
+  public_key = "${var.public_key}"
 }
 
 output "aws_account_id" {
@@ -40,4 +41,8 @@ output "zone_id" {
 
 output "zone_name_servers" {
   value = "${module.global.zone_name_servers}"
+}
+
+output "public_key" {
+  value = "${module.global.public_key}"
 }
